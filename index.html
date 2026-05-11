@@ -538,11 +538,38 @@ const PROGRAM = {
     duration: "55-70'",
     blocks: [
       {
-        tag: "warm", name: "Warm-up", rest: "—",
+        tag: "warm", name: "Warm-up + Attivazione Core", rest: "—",
         exercises: [
           { name: "Cardio dinamico (bike/rower)", prescr: { sets: "1", reps: "5'", rpe: "5" }, note: "FC sale gradualmente" },
           { name: "Mobility T-spine: cat-cow + open book", prescr: { sets: "2×8", reps: "per lato" } },
-          { name: "Band pull-apart + shoulder dislocates", prescr: { sets: "2×15" }, note: "Riscalda le spalle prima delle spinte" }
+          { name: "Band pull-apart + shoulder dislocates", prescr: { sets: "2×15" }, note: "Riscalda le spalle prima delle spinte" },
+          { name: "Plank — attivazione", prescr: { sets: "2×20\"" }, note: "<b>Pre-attivazione core</b>: non al limite, serve solo per stabilizzare il busto prima dei carichi." },
+          { name: "Stir the pot — attivazione", prescr: { sets: "1×6", reps: "cerchi per lato" }, note: "Cerchi piccoli, bacino fermo. Solo per accendere il core, non esaurirlo." }
+        ]
+      },
+      {
+        tag: "warm", name: "Riscaldamento specifico — Panca + OHP", rest: "60\"",
+        exercises: [
+          {
+            name: "Riscaldamento panca piana",
+            prescrByWeek: {
+              1: { sets: "4 serie", reps: "10×20kg · 6×40kg · 4×55kg · 2×65kg", note: "Poi lavoro a 70kg" },
+              2: { sets: "4 serie", reps: "10×20kg · 6×42.5kg · 4×57.5kg · 2×67.5kg", note: "Poi lavoro a 72.5kg" },
+              3: { sets: "4 serie", reps: "10×20kg · 6×45kg · 4×60kg · 2×72.5kg", note: "Poi lavoro a 77.5kg" },
+              4: { sets: "3 serie", reps: "10×20kg · 6×40kg · 3×55kg", note: "DELOAD · poi lavoro a 65kg" }
+            },
+            note: "Rec 60\" tra le serie. <b>Non stancarti</b>: meno rep man mano che sali. Le ultime 2 reps devono sembrare facili."
+          },
+          {
+            name: "Riscaldamento military press manubri",
+            prescrByWeek: {
+              1: { sets: "2 serie", reps: "10×8kg/m · 6×14kg/m", note: "Poi lavoro ~20kg/m" },
+              2: { sets: "2 serie", reps: "10×8kg/m · 6×16kg/m", note: "Poi lavoro ~22kg/m" },
+              3: { sets: "2 serie", reps: "10×8kg/m · 5×18kg/m", note: "Poi lavoro ~24kg/m" },
+              4: { sets: "2 serie", reps: "10×8kg/m · 6×14kg/m", note: "DELOAD · carichi ridotti" }
+            },
+            note: "Adatta i kg al tuo massimale OHP. Arriva al secondo set vicino al carico di lavoro senza stancarti."
+          }
         ]
       },
       {
@@ -551,24 +578,24 @@ const PROGRAM = {
           {
             name: "Panca piana con bilanciere",
             prescrByWeek: {
-              1: { sets: "4×8", rpe: "7", tempo: "3-1-1" },
-              2: { sets: "4×7", rpe: "7-8", tempo: "3-1-1" },
-              3: { sets: "5×6", rpe: "8", tempo: "3-0-1" },
-              4: { sets: "3×6", rpe: "6", tempo: "3-1-2", note: "DELOAD: -40% volume" }
+              1: { sets: "5×5", rpe: "7-8", tempo: "2-1-1", note: "FORZA · concentrica esplosiva" },
+              2: { sets: "5×4", rpe: "8-9", tempo: "2-0-1", note: "FORZA · +2.5kg vs W1" },
+              3: { sets: "4×10", rpe: "7", tempo: "3-1-1", note: "IPERTROFIA · -15% carico, più volume" },
+              4: { sets: "3×6", rpe: "6", tempo: "3-1-2", note: "DELOAD · -40% volume" }
             },
-            note: "<b>Set-up</b>: scapole retratte, piedi piantati, leggero arco lombare. Tocca il petto controllando.",
+            note: "<b>Set-up</b>: scapole retratte, piedi piantati, leggero arco lombare. W1-W2: concentrica esplosiva. W3: tempo lento per massimizzare TUT.",
             alts: ["Panca con manubri", "Panca inclinata bilanciere", "Floor press"]
           },
           {
-            name: "Military press in piedi (OHP)",
+            name: "Military press manubri (in piedi)",
             prescrByWeek: {
-              1: { sets: "3×8", rpe: "7", tempo: "2-1-1" },
-              2: { sets: "4×7", rpe: "7-8", tempo: "2-1-1" },
-              3: { sets: "4×6", rpe: "8", tempo: "2-0-1" },
-              4: { sets: "2×8", rpe: "5-6", tempo: "2-1-2" }
+              1: { sets: "4×5", rpe: "7-8", tempo: "2-1-1", note: "FORZA · carico pesante" },
+              2: { sets: "4×4", rpe: "8-9", tempo: "2-0-1", note: "FORZA · +2kg/m vs W1" },
+              3: { sets: "3×10", rpe: "7", tempo: "2-1-2", note: "IPERTROFIA · -15% carico" },
+              4: { sets: "2×8", rpe: "5-6", tempo: "2-1-2", note: "DELOAD" }
             },
-            note: "Glutei stretti, addominali contratti, niente iperestensione lombare.",
-            alts: ["Push press", "OHP seduto manubri", "Landmine press"]
+            note: "Glutei stretti, addominali contratti, niente iperestensione lombare. Manubri: maggiore ROM e correzione asimmetrie vs bilanciere.",
+            alts: ["OHP bilanciere", "Push press", "Landmine press"]
           }
         ]
       },
@@ -611,11 +638,11 @@ const PROGRAM = {
         ]
       },
       {
-        tag: "core", name: "Core", rest: "45-60\"",
+        tag: "core", name: "Core — Volume completo", rest: "45-60\"",
         exercises: [
-          { name: "Plank ponderato", prescrByWeek: { 1:{sets:"3×40\""},2:{sets:"3×50\""},3:{sets:"3×60\""},4:{sets:"2×30\""} }, note: "Glutei stretti, niente sedere su." },
-          { name: "Pallof press (cavi/banda)", prescrByWeek: { 1:{sets:"3×10/lato"},2:{sets:"3×12/lato"},3:{sets:"3×12/lato",rpe:"8"},4:{sets:"2×8/lato"} }, note: "Anti-rotazione: resisti al cavo che ti tira." },
-          { name: "Hollow hold", prescrByWeek: { 1:{sets:"3×20\""},2:{sets:"3×25\""},3:{sets:"3×30\""},4:{sets:"2×15\""} }, note: "Lombare schiacciata a terra." }
+          { name: "Plank ponderato", prescrByWeek: { 1:{sets:"3×40\""},2:{sets:"3×50\""},3:{sets:"3×60\""},4:{sets:"2×30\""} }, note: "Glutei stretti, niente sedere su. Aggiungi peso sulla schiena se disponibile." },
+          { name: "Stir the pot (fitball)", prescrByWeek: { 1:{sets:"3×8/lato"},2:{sets:"3×10/lato"},3:{sets:"3×12/lato"},4:{sets:"2×8/lato"} }, note: "<b>Anti-rotazione</b>: gomiti sulla fitball, cerchi lenti. Bacino completamente fermo. Cerchi piccoli = più difficile." },
+          { name: "Hollow hold", prescrByWeek: { 1:{sets:"3×20\""},2:{sets:"3×25\""},3:{sets:"3×30\""},4:{sets:"2×15\""} }, note: "Lombare schiacciata a terra, braccia e gambe distese." }
         ]
       },
       {
@@ -630,10 +657,10 @@ const PROGRAM = {
   },
 
   B: {
-    name: "Pull + Legs",
+    name: "Pull + Squat + Legs",
     icon: "🏋",
-    target: "Schiena · Bicipiti · Quadricipiti · Glutei",
-    duration: "55-70'",
+    target: "Schiena · Bicipiti · Quadricipiti · Glutei · Femorali",
+    duration: "60-75'",
     blocks: [
       {
         tag: "warm", name: "Warm-up", rest: "—",
@@ -644,17 +671,32 @@ const PROGRAM = {
         ]
       },
       {
+        tag: "warm", name: "Riscaldamento specifico — Squat", rest: "60-90\"",
+        exercises: [
+          {
+            name: "Riscaldamento squat con bilanciere",
+            prescrByWeek: {
+              1: { sets: "4 serie", reps: "10×20kg · 6×45kg · 4×60kg · 2×70kg", note: "Poi lavoro (es. 80kg)" },
+              2: { sets: "4 serie", reps: "10×20kg · 6×47.5kg · 4×62.5kg · 2×72.5kg", note: "Poi lavoro (es. 82.5kg)" },
+              3: { sets: "4 serie", reps: "10×20kg · 6×50kg · 4×67.5kg · 2×77.5kg", note: "Poi lavoro (es. 87.5kg)" },
+              4: { sets: "3 serie", reps: "10×20kg · 6×45kg · 3×60kg", note: "DELOAD · carichi ridotti" }
+            },
+            note: "Adatta i kg al tuo massimale squat. <b>Goblet squat 2×10</b> con manubrio leggero prima del bilanciere se la mobilità è limitata. Recupero 60-90\" tra le serie di riscaldamento."
+          }
+        ]
+      },
+      {
         tag: "main", name: "Forza primaria", rest: "120-150\"",
         exercises: [
           {
             name: "Squat con bilanciere",
             prescrByWeek: {
-              1: { sets: "4×8", rpe: "7", tempo: "3-1-1" },
-              2: { sets: "4×7", rpe: "7-8", tempo: "3-1-1" },
-              3: { sets: "5×6", rpe: "8", tempo: "3-0-1" },
-              4: { sets: "3×6", rpe: "6", tempo: "3-1-2" }
+              1: { sets: "5×5", rpe: "7-8", tempo: "2-1-1", note: "FORZA · concentrica esplosiva" },
+              2: { sets: "5×4", rpe: "8-9", tempo: "2-0-1", note: "FORZA · +2.5kg vs W1" },
+              3: { sets: "4×10", rpe: "7", tempo: "3-1-1", note: "IPERTROFIA · -15% carico" },
+              4: { sets: "3×6", rpe: "6", tempo: "3-1-2", note: "DELOAD" }
             },
-            note: "Profondità: parallelo o sotto. Ginocchia in linea con i piedi.",
+            note: "Profondità: parallelo o sotto. Ginocchia in linea con i piedi. <b>Separato dallo stacco (giovedì) per 48h di recupero.</b>",
             alts: ["Front squat", "Goblet squat", "Hack squat machine"]
           },
           {
@@ -696,15 +738,15 @@ const PROGRAM = {
             alts: ["Rematore manubrio", "Pendlay row", "Seal row"]
           },
           {
-            name: "Leg press / Affondi camminati",
+            name: "Affondi camminati",
             prescrByWeek: {
-              1: { sets: "3×12", rpe: "7" },
-              2: { sets: "3×12", rpe: "8" },
-              3: { sets: "4×10", rpe: "8" },
-              4: { sets: "2×12", rpe: "5" }
+              1: { sets: "3×10/lato", rpe: "7" },
+              2: { sets: "3×12/lato", rpe: "8" },
+              3: { sets: "4×10/lato", rpe: "8" },
+              4: { sets: "2×10/lato", rpe: "5" }
             },
-            note: "Se affondi: passo lungo, ginocchio posteriore quasi a terra.",
-            alts: ["Bulgarian split squat", "Step-up", "Hack squat"]
+            note: "Passo lungo, ginocchio posteriore quasi a terra. Lavora diversamente dallo squat — tiene il volume gambe senza sovraccaricare.",
+            alts: ["Bulgarian split squat", "Step-up con manubri", "Reverse lunge"]
           },
           {
             name: "Curl bicipiti manubri (alternati)",
@@ -740,29 +782,44 @@ const PROGRAM = {
   C: {
     name: "Full Body",
     icon: "🏋",
-    target: "Total body · Power · Conditioning",
+    target: "Stacco · Upper · Glutei · Conditioning",
     duration: "55-70'",
     blocks: [
       {
         tag: "warm", name: "Warm-up", rest: "—",
         exercises: [
           { name: "Skipping + jumping jack", prescr: { sets: "1", reps: "3'" } },
-          { name: "Squat to stand + inchworm", prescr: { sets: "2×6" } },
-          { name: "Banded clamshell + glute bridge", prescr: { sets: "2×12" }, note: "Attiva i glutei medi." }
+          { name: "Hip hinge drill (bilanciere sul muro)", prescr: { sets: "2×8" }, note: "Impara il pattern dello stacco prima di caricare." },
+          { name: "Banded clamshell + glute bridge", prescr: { sets: "2×12" }, note: "Attiva i glutei medi. Squat oggi NON previsto — è nel Workout B." }
         ]
       },
       {
-        tag: "main", name: "Power / Forza", rest: "120\"",
+        tag: "warm", name: "Riscaldamento specifico — Stacco", rest: "90-120\"",
+        exercises: [
+          {
+            name: "Riscaldamento deadlift",
+            prescrByWeek: {
+              1: { sets: "5 serie", reps: "8×40kg · 5×70kg · 3×90kg · 2×110kg · 1×125kg", note: "Poi lavoro (es. 140kg)" },
+              2: { sets: "5 serie", reps: "8×40kg · 5×72.5kg · 3×92.5kg · 2×112.5kg · 1×127.5kg", note: "Poi lavoro (es. 142.5kg)" },
+              3: { sets: "5 serie", reps: "8×40kg · 5×75kg · 3×97.5kg · 2×117.5kg · 1×132.5kg", note: "Poi lavoro (es. 147.5kg)" },
+              4: { sets: "4 serie", reps: "8×40kg · 5×70kg · 3×90kg · 2×110kg", note: "DELOAD · niente singolo pesante" }
+            },
+            note: "<b>Lo stacco è l'esercizio che richiede più riscaldamento.</b> Recupero 90-120\" tra le ultime serie pesanti. La singola a 125kg deve essere fluida e non stressante — se non lo è, riduci il carico di lavoro. <b>X = concentrica esplosiva.</b>"
+          }
+        ]
+      },
+      {
+        tag: "main", name: "Power / Forza — Stacco", rest: "150-180\"",
         exercises: [
           {
             name: "Stacco da terra (deadlift)",
             prescrByWeek: {
-              1: { sets: "4×6", rpe: "7", tempo: "2-1-X" },
-              2: { sets: "4×5", rpe: "7-8", tempo: "2-1-X" },
-              3: { sets: "5×4", rpe: "8", tempo: "2-0-X" },
-              4: { sets: "3×5", rpe: "6" }
+              1: { sets: "4×4", rpe: "7-8", tempo: "2-1-X", note: "FORZA · concentrica esplosiva" },
+              2: { sets: "4×3", rpe: "8-9", tempo: "2-0-X", note: "FORZA · +5kg vs W1" },
+              3: { sets: "3×8", rpe: "7", tempo: "3-1-X", note: "IPERTROFIA · -15% carico" },
+              4: { sets: "3×5", rpe: "6", note: "DELOAD" }
             },
-            note: "Barra vicina alle tibie, schiena dritta, spinta dai talloni. <b>Se hai DOMS</b>: sostituisci con trap-bar.",
+            note: "Barra vicina alle tibie, schiena dritta, spinta dai talloni. <b>48h di recupero dallo squat (martedì).</b> Se hai DOMS residui: sostituisci con trap-bar.",
             alts: ["Trap-bar deadlift", "Sumo deadlift", "Rack pull"]
           },
           {
@@ -1401,6 +1458,3 @@ renderPlan();
 </script>
 </body>
 </html>
-
-
-
